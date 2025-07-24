@@ -4,7 +4,7 @@ import { parseInsuranceQuery, searchRelevantClauses, evaluateDecision } from "@/
 export async function POST(request: NextRequest) {
   try {
     // Check if OpenAI API key is configured
-    if (!process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY === "your_openai_api_key_here") {
+    if (!process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY === "api_key") {
       return NextResponse.json(
         {
           error: "OpenAI API key is not configured. Please add your API key to the .env.local file.",
